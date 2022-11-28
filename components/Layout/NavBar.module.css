@@ -1,0 +1,13 @@
+.logo {
+    display: flex;
+}
+
+.logo section {
+    display: flex;
+    align-self: center;
+    padding: 0 1rem;
+}
+
+.logo h3 {
+    padding-right: 1rem;
+}

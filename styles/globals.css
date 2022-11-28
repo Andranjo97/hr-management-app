@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -15,12 +16,30 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+#__next {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.ant-menu-light {
+  background: #99ccff;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
 }
