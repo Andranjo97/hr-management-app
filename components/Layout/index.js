@@ -29,14 +29,13 @@ const AppLayout = ({ children }) => {
                 <Content
                     style={{
                         padding: '1rem 2rem',
-                        height: '85%',
-                        minHeight: '85%',
+                        height: '87%',
                     }}
                 >
                     {children}
                 </Content>
                 <footer>
-                    Andres Naranjo
+                    Jonathan Andres Naranjo
                 </footer>
             </ConfigProvider>
         </>

@@ -29,17 +29,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-a:hover {
-  color: #fff;
-}
-
 .ant-menu-light {
   background: #99ccff;
 }
 
 footer {
-  clear: both;
-  position: relative;
-  height: 200px;
-  margin-top: -200px;
+  margin: 0 5rem;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  border-top: 1px solid #e0e0e0;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.gray-text {
+  color: #818181 !important;
 }

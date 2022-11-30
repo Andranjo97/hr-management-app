@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
+const UIRoutes = require('./constants/ui-routes');
+
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
       {
         source: '/',
-        destination: '/people',
+        destination: UIRoutes.people.route,
         permanent: true,
       },
     ]

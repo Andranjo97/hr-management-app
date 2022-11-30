@@ -1,3 +1,7 @@
+.navBar a:hover {
+    color: white;
+}
+
 .logo {
     display: flex;
 }
