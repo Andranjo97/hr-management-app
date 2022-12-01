@@ -1,11 +1,11 @@
 import { MongoClient, ObjectId } from 'mongodb';
 import BaseClient from './baseClient';
 
-const { MONGO_DB_USER, MONGO_BD_PASS, MONGO_DB_URL, MONGO_DB_NAME } = process.env;
+const { MONGO_DB_URL, NODE_ENV } = process.env;
 
 export default class MongoDBClient extends BaseClient {
     static async connect() {
-        return await MongoClient.connect(`mongodb+srv://${MONGO_DB_USER}:${MONGO_BD_PASS}@${MONGO_DB_URL}/${MONGO_DB_NAME}?retryWrites=true&w=majority`);
+        return await MongoClient.connect(MONGO_DB_URL);
     }
 
     static async getAll(collectionName) {

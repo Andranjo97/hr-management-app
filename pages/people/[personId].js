@@ -3,6 +3,10 @@ import { Avatar } from 'antd';
 import MongoDBClient from '../../services/clients/MongoClient';
 
 const PersonDetails = ({ person }) => {
+    if (!person) {
+        return <span>There seems to be an error!</span>
+    }
+
     return (
         <div>
             <Avatar size={128} src={person.profilePicUrl}/>

@@ -3,12 +3,16 @@ import Link from 'next/link';
 import { Menu, Typography } from 'antd';
 import { UserOutlined, CalendarOutlined } from '@ant-design/icons';
 
-import UIRoutes from '../../constants/ui-routes';
-import styles from './NavBar.module.css';
+import UIRoutes from '../../../constants/ui-routes';
+import styles from './AppMenu.module.css';
+import AppMenuItem from './AppMenuItem';
 
 const { Title } = Typography;
 
-const NavBar = () => {
+UIRoutes.people.icon = <UserOutlined style={{ marginRight: '0.5rem' }} />;
+UIRoutes.calendar.icon = <CalendarOutlined style={{ marginRight: '0.5rem' }} />;
+
+const AppMenu = () => {
     return (
         <Menu
             className={styles.navBar}
@@ -25,7 +29,7 @@ const NavBar = () => {
             <Menu.Item key={UIRoutes.people.key}>
                 <Link href={UIRoutes.people.route}>
                     <div style={{ display: 'flex' }}>
-                        <UserOutlined style={{ marginRight: '0.5rem' }} />
+                        {UIRoutes.people.icon}
                         <Title level={5}>
                             {UIRoutes.people.label}
                         </Title>
@@ -35,7 +39,7 @@ const NavBar = () => {
             <Menu.Item key={UIRoutes.calendar.key}>
                 <Link href={UIRoutes.calendar.route}>
                     <div style={{ display: 'flex' }}>
-                        <CalendarOutlined style={{ marginRight: '0.5rem' }} />
+                        {UIRoutes.calendar.icon}
                         <Title level={5}>
                             {UIRoutes.calendar.label}
                         </Title>
@@ -46,4 +50,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default AppMenu;

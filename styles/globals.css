@@ -27,10 +27,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-inline-start: 0;
   margin-inline-end: 0;
   font-weight: bold;
+  margin: 0 !important;
 }
 
 .ant-menu-light {
-  background: #99ccff;
+  background: #76b5c5;
 }
 
 footer {
@@ -53,4 +54,8 @@ footer {
 
 .gray-text {
   color: #818181 !important;
+}
+
+.h-100 {
+  height: 100%;
 }
