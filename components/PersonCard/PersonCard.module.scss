@@ -9,3 +9,8 @@
 .grayText {
     color: $gray;
 }
+
+.position {
+    @extend .grayText;
+    font-size: 1.2rem;
+}

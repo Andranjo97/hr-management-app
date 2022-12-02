@@ -33,6 +33,9 @@
     &--justifyAround {
          justify-content: space-around;
     }
+    &--justifyEvenly {
+         justify-content: space-evenly;
+    }
     &--1gap {
          gap: 0.2rem;
     }

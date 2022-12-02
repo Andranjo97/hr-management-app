@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { Layout, ConfigProvider } from 'antd';
 import AppMenu from './AppMenu';
+import styles from './Layout.module.scss';
 
 const MenuFoldOutlined = dynamic(() => import('@ant-design/icons/lib/icons/MenuFoldOutlined'))
 const MenuUnfoldOutlined = dynamic(() => import('@ant-design/icons/lib/icons/MenuUnfoldOutlined'))
@@ -16,7 +17,7 @@ const AppLayout = ({ children }) => {
         <ConfigProvider
             theme={{
                 token: {
-                    colorPrimary: '#fff',
+                    colorPrimary: '#76b5c5',
                 },
             }}
         >
@@ -32,7 +33,7 @@ const AppLayout = ({ children }) => {
                 <meta name='theme-color' content='#ffffff'/>
             </Head>
 
-            <Layout className='layout h-100'>
+            <Layout className={`layout ${styles.container}`}>
                 <Sider trigger={null} collapsible collapsed={collapsed}>
                     <AppMenu />
                 </Sider>
@@ -46,10 +47,7 @@ const AppLayout = ({ children }) => {
                         })}
                     </Header>
                     <Content
-                        className='site-layout-background'
-                        style={{
-                            padding: 24,
-                        }}
+                        className={`site-layout-background ${styles.content}`}
                     >
                         {children}
                     </Content>
