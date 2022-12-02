@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Avatar } from 'antd';
-import MongoDBClient from '../../services/clients/MongoClient';
+import MongoDBClient from '@services/clients/MongoClient';
 
 const PersonDetails = ({ person }) => {
     if (!person) {
