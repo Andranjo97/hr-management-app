@@ -1,0 +1,22 @@
+.navBar {
+    height: 100%;
+
+    a:hover {
+        color: white;
+    }
+}
+
+.logo {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+
+    img {
+        display: flex;
+        margin: 0 1rem;
+    }
+
+    h3 {
+        padding-right: 1rem;
+    }
+}

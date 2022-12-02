@@ -4,7 +4,7 @@ import { Menu, Typography } from 'antd';
 import { UserOutlined, CalendarOutlined } from '@ant-design/icons';
 
 import UIRoutes from '../../../constants/ui-routes';
-import styles from './AppMenu.module.css';
+import styles from './AppMenu.module.scss';
 import AppMenuItem from './AppMenuItem';
 
 const { Title } = Typography;

@@ -1,3 +1,5 @@
+@import '_importable';
+
 html,
 body {
   padding: 0;
@@ -31,7 +33,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ant-menu-light {
-  background: #76b5c5;
+  background: $app-blue !important;
+}
+
+.ant-menu-light-shade {
+  background: $app-blue-shade !important;
 }
 
 footer {
@@ -53,7 +59,7 @@ footer {
 }
 
 .gray-text {
-  color: #818181 !important;
+  color: var(--gray) !important;
 }
 
 .h-100 {

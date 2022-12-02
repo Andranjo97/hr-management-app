@@ -38,7 +38,7 @@ const AppLayout = ({ children }) => {
                 </Sider>
                 <Layout className='site-layout site-layout-background'>
                     <Header
-                        className='ant-menu-light'
+                        className='ant-menu-light ant-menu-light-shade'
                     >
                         {createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                             className: 'trigger',
