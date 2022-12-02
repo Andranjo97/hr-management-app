@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from 'mongodb';
 import BaseClient from './baseClient';
 
-const { MONGO_DB_URL, NODE_ENV } = process.env;
+const { MONGO_DB_URL } = process.env;
 
 export default class MongoDBClient extends BaseClient {
     static async connect() {

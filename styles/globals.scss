@@ -4,7 +4,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -31,7 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 0 !important;
 }
-
+// ********************
+// Ant Design Overrides
+// ********************
 .ant-menu-light {
   background: $app-blue !important;
 }
@@ -40,9 +41,14 @@ h1, h2, h3, h4, h5, h6 {
   background: $app-blue-shade !important;
 }
 
+.ant-picker-calendar-date-content {
+  height: auto !important;
+}
+// ********************
+
 footer {
   margin: 0 5rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
   color: gray;

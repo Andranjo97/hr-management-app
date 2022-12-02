@@ -32,6 +32,7 @@ const Flex = forwardRef((
         [styles['container--justifyEnd']]: justify === 'end',
         [styles['container--justifyBetween']]: justify === 'between',
         [styles['container--justifyAround']]: justify === 'around',
+        [styles['container--justifyEvenly']]: justify === 'evenly',
         [styles['container--1gap']]: gap === 1,
         [styles['container--2gap']]: gap === 2,
         [styles['container--3gap']]: gap === 3,
