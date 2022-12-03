@@ -1,1 +1,22 @@
+@function em-calc($size) {
+    $em-size: calc($size / 16px * 1em);
+    @return $em-size;
+}
+
+// Media query ignores 62.5% font size
+@function rem-calc($size) {
+    $rem-size: calc($size / 16px * 1rem);
+    @return $rem-size;
+}
+
+/*** Breakpoints ***/
+/*******************/
+$media-xs: em-calc(320px);
+$media-sm: em-calc(481px);
+$media-md: em-calc(769px);
+$media-lg: em-calc(992px);
+$media-xl: em-calc(1024px);
+$media-xxl: em-calc(1440px);
+$media-xxxl: em-calc(1600px);
+
 $max-width: 100rem;

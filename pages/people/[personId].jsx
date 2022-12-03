@@ -1,16 +1,27 @@
 import PropTypes from 'prop-types';
-import { Avatar } from 'antd';
+import { Avatar, Typography } from 'antd';
 import MongoDBClient from '@services/clients/MongoClient';
+import Flex from '@components/common/Flex';
+import { POSITIONS } from '@constants/positions';
+
+const { Title, Text } = Typography;
 
 const PersonDetails = ({ person }) => {
     if (!person) {
         return <span>There seems to be an error!</span>
     }
 
+    const fullName = `${person.firstName} ${person.middleName ? `${person.middleName} ` : ''}${person.lastName}`;
+
     return (
         <div>
-            <Avatar size={128} src={person.profilePicUrl}/>
-            {person.firstName}
+            <Flex>
+                <Avatar size={128} src={person.profilePicUrl}/>
+                <Flex column style={{ marginLeft: '1rem' }} justify='center'>
+                    <Title level={3}>{fullName}</Title>
+                    <Text>{person.position}</Text>
+                </Flex>
+            </Flex>
         </div>
     );
 };
@@ -31,7 +42,7 @@ export async function getStaticProps(context) {
 
     return {
         props: {
-            person,
+            person: { ...person, position: POSITIONS[person.position] },
         }
     };
 }

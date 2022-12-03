@@ -18,6 +18,7 @@ const nextConfig = {
       '@pages': path.resolve('./pages'),
       '@public': path.resolve('./public'),
       '@services': path.resolve('./services'),
+      '@utils': path.resolve('./utils'),
     }
 
     return configCopy;

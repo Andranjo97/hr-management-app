@@ -6,17 +6,37 @@
     }
 }
 
+.menuItemIcon {
+    margin-right: 0.5rem;
+}
+
+.menuItemLabel {
+    @media screen and (max-width: $media-md) {
+        display: none;
+    }
+}
+
 .logo {
     display: flex;
-    padding: 1rem 0;
+    padding: 0.95rem 0;
     align-items: center;
+    height: rem-calc(64px);
 
     img {
         display: flex;
         margin: 0 1rem;
+
+        @media screen and (max-width: $media-md) {
+            margin: 0 0.7rem;
+        }
     }
 
     h3 {
+        @extend .menuItemLabel;
         padding-right: 1rem;
+    }
+
+    @media screen and (max-width: $media-md) {
+        justify-content: center;
     }
 }

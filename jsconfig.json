@@ -9,7 +9,8 @@
       "@constants/*": ["constants/*"],
       "@pages/*": ["pages/*"],
       "@services/*": ["services/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
     }
   }
 }
