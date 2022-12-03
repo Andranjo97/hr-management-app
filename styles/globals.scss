@@ -33,17 +33,56 @@ h1, h2, h3, h4, h5, h6 {
 // ********************
 // Ant Design Overrides
 // ********************
-.ant-menu-light {
+.app-blue-bg-color {
   background: $app-blue !important;
 }
 
-.ant-menu-light-shade {
+.app-blue-shade-bg-color {
   background: $app-blue-shade !important;
 }
 
 .ant-picker-calendar-date-content {
   height: auto !important;
 }
+
+.ant-menu-item-selected {
+  .ant-menu-title-content {
+    svg {
+      color: black;
+    }
+
+    h5 {
+      color: black;
+    }
+  }
+}
+
+.ant-menu-title-content {
+  svg {
+    color: white;
+  }
+
+  h5 {
+    color: white;
+  }
+
+  @media screen and (max-width: $media-md) {
+    overflow: unset !important;
+  }
+}
+
+.ant-menu-item {
+  @media screen and (max-width: $media-md) {
+    padding-left: 28% !important;
+  }
+}
+
+.ant-list-item {
+  @media screen and (max-width: $media-md) {
+    padding: 0 !important;
+  }
+}
+
 // ********************
 
 footer {
@@ -70,4 +109,12 @@ footer {
 
 .h-100 {
   height: 100%;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
 }

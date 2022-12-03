@@ -2,6 +2,7 @@ import { useState, createElement } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { Layout, ConfigProvider } from 'antd';
+import Footer from '@components/common/Footer';
 import AppMenu from './AppMenu';
 import styles from './Layout.module.scss';
 
@@ -34,12 +35,12 @@ const AppLayout = ({ children }) => {
             </Head>
 
             <Layout className={`layout ${styles.container}`}>
-                <Sider trigger={null} collapsible collapsed={collapsed}>
+                <Sider className={styles.sider} trigger={null} collapsible collapsed={collapsed}>
                     <AppMenu />
                 </Sider>
                 <Layout className='site-layout site-layout-background'>
                     <Header
-                        className='ant-menu-light ant-menu-light-shade'
+                        className='app-blue-shade-bg-color'
                     >
                         {createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                             className: 'trigger',
@@ -51,9 +52,7 @@ const AppLayout = ({ children }) => {
                     >
                         {children}
                     </Content>
-                    <footer>
-                        Jonathan Andres Naranjo
-                    </footer>
+                    <Footer />
                 </Layout>
             </Layout>
         </ConfigProvider>
