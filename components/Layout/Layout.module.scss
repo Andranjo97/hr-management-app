@@ -7,7 +7,7 @@
 }
 
 .sider {
-    @media screen and (max-width: $media-md) {
+    @media screen and (max-width: $media-sm) {
         width: 3rem !important;
         max-width: 3rem !important;
         min-width: 3rem !important;

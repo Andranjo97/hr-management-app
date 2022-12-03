@@ -5,6 +5,8 @@ import { Layout, ConfigProvider } from 'antd';
 import Footer from '@components/common/Footer';
 import AppMenu from './AppMenu';
 import styles from './Layout.module.scss';
+import { useMediaQuery } from '@utils/hooks';
+import { mediaMd } from '@styles/export.module.scss';
 
 const MenuFoldOutlined = dynamic(() => import('@ant-design/icons/lib/icons/MenuFoldOutlined'))
 const MenuUnfoldOutlined = dynamic(() => import('@ant-design/icons/lib/icons/MenuUnfoldOutlined'))
@@ -12,7 +14,7 @@ const MenuUnfoldOutlined = dynamic(() => import('@ant-design/icons/lib/icons/Men
 const { Content, Sider, Header } = Layout;
 
 const AppLayout = ({ children }) => {
-    const [collapsed, setCollapsed] = useState(false);
+    const isMediumScreen = useMediaQuery(mediaMd);
 
     return (
         <ConfigProvider
@@ -35,18 +37,11 @@ const AppLayout = ({ children }) => {
             </Head>
 
             <Layout className={`layout ${styles.container}`}>
-                <Sider className={styles.sider} trigger={null} collapsible collapsed={collapsed}>
+                <Sider className={styles.sider} trigger={null} collapsible collapsed={isMediumScreen}>
                     <AppMenu />
                 </Sider>
                 <Layout className='site-layout site-layout-background'>
-                    <Header
-                        className='app-blue-shade-bg-color'
-                    >
-                        {createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                            className: 'trigger',
-                            onClick: () => setCollapsed(!collapsed),
-                        })}
-                    </Header>
+                    <Header className='app-blue-shade-bg-color'/>
                     <Content
                         className={`site-layout-background ${styles.content}`}
                     >

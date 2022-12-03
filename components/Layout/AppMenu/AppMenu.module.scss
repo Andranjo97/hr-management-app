@@ -35,4 +35,8 @@
         @extend .menuItemLabel;
         padding-right: 1rem;
     }
+
+    @media screen and (max-width: $media-md) {
+        justify-content: center;
+    }
 }
