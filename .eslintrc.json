@@ -1,3 +1,42 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    // "plugin:jsx-a11y/recommended",
+    "next",
+    "prettier",
+    "plugin:@next/next/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./jsconfig.json"
+  },
+  "plugins": ["prettier", "react", "import", "@typescript-eslint"],
+  "rules": {
+    "arrow-parens": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "import/no-extraneous-dependencies": "off",
+    "import/order": [
+      "warn",
+      { "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"] }
+    ],
+    // "indent": ["error", "tab", { "SwitchCase": 1 }], // ! Can't get this to work with Prettier, would love to fix...
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/jsx-indent": ["off", "tab"],
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/no-unused-prop-types": "off",
+    "max-lines": ["warn", { "max": 200, "skipComments": true, "skipBlankLines": true }],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-tabs": "off",
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+    "react/function-component-definition": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }
