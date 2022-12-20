@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "eslint --fix && prettier -w \"{,!(node_modules),!(.next),!(.storybook)/**/}*.{js,jsx,.ts,.tsx}\""
+    "format": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
     "@ant-design/icons": "^4.8.0",

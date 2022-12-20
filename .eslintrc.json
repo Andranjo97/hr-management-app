@@ -13,6 +13,7 @@
   },
   "plugins": ["prettier", "react", "import", "@typescript-eslint"],
   "rules": {
+    "quotes": [2, "single", { "avoidEscape": true }],
     "arrow-parens": "off",
     "comma-dangle": ["error", "always-multiline"],
     "import/no-extraneous-dependencies": "off",
@@ -20,7 +21,7 @@
       "warn",
       { "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"] }
     ],
-    // "indent": ["error", "tab", { "SwitchCase": 1 }], // ! Can't get this to work with Prettier, would love to fix...
+     "indent": ["error", "tab", { "SwitchCase": 1 }],
     "jsx-quotes": ["error", "prefer-single"],
     "react/jsx-indent": ["off", "tab"],
     "react/jsx-indent-props": ["error", "tab"],

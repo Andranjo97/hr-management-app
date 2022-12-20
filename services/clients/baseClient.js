@@ -1,9 +1,9 @@
 export default class BaseClient {
-    static connect() {}
+	static connect();
 
-    static getAll() {}
+	static getAll();
 
-    static getWithLimit() {}
+	static getWithLimit();
 
-    static getOneByAttribute() {}
+	static getOneByAttribute();
 }

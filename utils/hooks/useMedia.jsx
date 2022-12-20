@@ -1,10 +1,10 @@
 import { useState, useCallback, useEffect } from 'react';
 
-export const useMediaQuery = width => {
+export const useMediaQuery = (width) => {
 	const [targetReached, setTargetReached] = useState(false);
 	let parsedWidth = width;
 	if (typeof width === 'string') {
-		const regEx = RegExp( /[a-zA-Z]/);
+		const regEx = RegExp(/[a-zA-Z]/);
 		parsedWidth = regEx.test(width) ? width : `${width}px`;
 	}
 
@@ -24,6 +24,6 @@ export const useMediaQuery = width => {
 	}, []);
 
 	return targetReached;
-}
+};
 
 export default useMediaQuery;

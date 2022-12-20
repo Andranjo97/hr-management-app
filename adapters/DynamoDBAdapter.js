@@ -1,5 +1,3 @@
-class DynamoDBAdapter {
-
-}
+class DynamoDBAdapter {}
 
 export default DynamoDBAdapter;
