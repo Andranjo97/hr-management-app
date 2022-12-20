@@ -1,9 +1,17 @@
 export default class BaseClient {
-	static connect();
+	static connect() {
+		// TODO IMPLEMENT
+	}
 
-	static getAll();
+	static getAll() {
+		// TODO IMPLEMENT
+	}
 
-	static getWithLimit();
+	static getWithLimit() {
+		// TODO IMPLEMENT
+	}
 
-	static getOneByAttribute();
+	static getOneByAttribute() {
+		// TODO IMPLEMENT
+	}
 }

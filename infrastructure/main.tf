@@ -47,6 +47,15 @@ locals {
   aliases = [var.custom_domain, "*.${var.custom_domain}"]
 }
 
+################################################
+#                    S3                        #
+################################################
+
+module "s3_tfstate" {
+  source      = "/common/s3"
+  bucket_name = "tfstate-hrapp"
+}
+
 #######################
 # Route53 Domain record
 #######################
